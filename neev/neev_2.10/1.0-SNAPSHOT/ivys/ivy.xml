@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
+	<info organisation="neev" module="neev_2.10" revision="1.0-SNAPSHOT" status="integration" publication="20140301125137">
+		<description>
+		neev
+		</description>
+	</info>
+	<configurations>
+		<conf name="compile" visibility="public" description=""/>
+		<conf name="runtime" visibility="public" description="" extends="compile"/>
+		<conf name="test" visibility="public" description="" extends="runtime"/>
+		<conf name="provided" visibility="public" description=""/>
+		<conf name="optional" visibility="public" description=""/>
+		
+		
+		
+		
+		<conf name="sources" visibility="public" description=""/>
+		
+		<conf name="pom" visibility="public" description=""/>
+		
+	</configurations>
+	<publications>
+		<artifact name="neev_2.10" type="pom" ext="pom" conf="pom"/>
+		<artifact name="neev_2.10" type="jar" ext="jar" conf="compile"/>
+		<artifact name="neev_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		
+	</publications>
+	<dependencies>
+		
+		<dependency org="org.scala-lang" name="scala-library" rev="2.10.2" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-java-jdbc_2.10" rev="2.2.0" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-java-ebean_2.10" rev="2.2.0" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-cache_2.10" rev="2.2.0" conf="compile->default(compile)"/>
+		<dependency org="commons-lang" name="commons-lang" rev="2.6" conf="compile->default(compile)"/>
+		<dependency org="commons-io" name="commons-io" rev="2.4" conf="compile->default(compile)"/>
+		<dependency org="commons-collections" name="commons-collections" rev="3.2.1" conf="compile->default(compile)"/>
+		<dependency org="org.mongodb" name="mongo-java-driver" rev="2.10.1" conf="compile->default(compile)"/>
+		<dependency org="org.mongodb.morphia" name="morphia" rev="0.105" conf="compile->default(compile)"/>
+		<dependency org="org.mongodb.morphia" name="morphia-logging-slf4j" rev="0.105" conf="compile->default(compile)"/>
+		<dependency org="securesocial" name="securesocial_2.10" rev="2.1.2" conf="compile->default(compile)"/>
+		<dependency org="com.cloudinary" name="cloudinary" rev="1.0.4" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play_2.10" rev="2.2.0" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-test_2.10" rev="2.2.0" conf="test->default(compile)"/>
+		
+		<dependency org="com.typesafe.play" name="play-java_2.10" rev="2.2.0" conf="compile->default(compile)"/>
+	</dependencies>
+</ivy-module>
